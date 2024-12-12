@@ -1,41 +1,64 @@
-<div class="col-md-6 offset-md-3">
-<h3> Create Employee </h3>
-<form (ngSubmit) = "onSubmit()">
-
-    <div class="form-group">
-        <label> First Name</label>
-        <input type="text" class ="form-control" id = "firstName"
-            [(ngModel)] = "employee.firstName" name = "firstName">
+<div class="container">
+    <div class="form-wrapper">
+      <h3>Create Employee <mat-icon matBadge="60">home</mat-icon> </h3>
+      <form (ngSubmit)="onSubmit()">
+            
+        <div class="form-group">
+          <label>First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            [(ngModel)]="employee.firstName"
+            name="firstName"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label>Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            [(ngModel)]="employee.lastName"
+            name="lastName"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label>Email Id</label>
+          <input
+            type="email"
+            class="form-control"
+            id="emailId"
+            [(ngModel)]="employee.emailId"
+            name="emailId"
+            #email="ngModel"
+            required
+            (blur)="validateEmail()"
+            placeholder="Enter a valid email (e.g., john.doe@example.com)"
+          />
+          <div *ngIf="emailError" class="text-danger">{{ emailError }}</div>
+        </div>
+  
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            [(ngModel)]="employee.password"
+            name="password"
+            #password="ngModel"
+            required
+            (blur)="validatePassword()"
+            placeholder="Enter password (8+ characters)"
+          />
+          <div *ngIf="passwordError" class="text-danger">{{ passwordError }}</div>
+        </div>
+  
+        <button class="btn-submit" type="submit">Submit</button>
+      </form>
     </div>
-
-    <div class="form-group">
-        <label> Last Name</label>
-        <input type="text" class ="form-control" id = "lastName"
-            [(ngModel)] = "employee.lastName" name = "lastName">
-    </div>
-
-    <div class="form-group">
-        <label> Email Id</label>
-        <input type="text" class ="form-control" id = "emailId"
-            [(ngModel)] = "employee.emailId" name = "emailId"
-            #email="ngModel" 
-            required (blur)="validateEmail()">
-
-         <div *ngIf="emailError" class="text-danger">{{emailError}}</div>
-    </div>
-
-    <div class="form-group">
-        <label>Password</label>
-        <input type="password" class ="form-control" id = "password"
-            [(ngModel)] = "employee.password" name = "pasword"
-            #password = "ngModel"
-            required (blur)="validatePassword()">
-
-         <div *ngIf="passwordError" class="text-danger">{{passwordError}}</div>
-    </div>
-
-    <button class = "btn btn-success" type ="submit">Submit</button>
-
-</form>
-</div>
- 
+  </div>
+  

@@ -1,0 +1,100 @@
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+    background-color: #f4f4f9; /* Light background */
+  }
+  
+  /* Container Styling */
+  .container {
+    flex: 1; /* Ensures the container takes up available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Form Wrapper */
+  .form-wrapper {
+    background: #ffffff; /* White background for the form */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  /* Header */
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Form Elements */
+  .form-group {
+    margin-bottom: 12px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-control:focus {
+    border-color: #4caf50; /* Green focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+    outline: none;
+  }
+  
+  /* Error Text */
+  .text-danger {
+    font-size: 0.8rem;
+    color: #e74c3c; /* Red for error text */
+    margin-top: 5px;
+  }
+  
+  /* Submit Button */
+  .btn-submit {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    background-color: #4caf50; /* Green color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background-color: #45a049;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #0000ff; /* Blue background for the footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+  

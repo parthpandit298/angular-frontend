@@ -3,6 +3,7 @@ import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 import { Router } from '@angular/router';
 import { error } from 'console';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-create-employee',
