@@ -15,6 +15,8 @@ export class EmployeeListComponent implements OnInit {
 
   employees: Employee[];
   successMessage: string = '';
+  displayedColumns: string[] = ['firstName', 'lastName', 'emailId', 'actions'];
+
 
   constructor(
     private employeeService: EmployeeService,
@@ -61,16 +63,6 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
-  // deleteEmployee(id:number){
-  //   this.employeeService.deleteEmployee(id).subscribe(data => {
-  //     console.log(data);
-  //     this.successMessage = 'Employee was Successfully deleted';
-  //     this.getEmployees();})
-
-  //     setTimeout(()=>{
-  //       this.successMessage = '';
-  //     },3000);
-  // }
 
   openDialog(id:number): void{
     const selectedEmployee = this.employees.find(emp => emp.id === id);
