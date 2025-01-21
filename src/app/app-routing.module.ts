@@ -5,6 +5,7 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeDetailsDialogComponent } from './employee-details-dialog/employee-details-dialog.component';
+import { GanttComponent } from './gantt/gantt.component';
 
 const routes: Routes = [
   {path: 'employees', component:EmployeeListComponent},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'',redirectTo: 'create-employee', pathMatch: 'full'},
   {path:'update-employee/:id',component:UpdateEmployeeComponent},
   {path:'employee-details/:id',component:EmployeeDetailsComponent},
-  {path:'openDialog/:id',component:EmployeeDetailsDialogComponent}
+  {path:'openDialog/:id',component:EmployeeDetailsDialogComponent},
+  {path:'gantt',component:GanttComponent}
 ];
 
 @NgModule({

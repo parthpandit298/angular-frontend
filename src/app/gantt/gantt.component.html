@@ -1,0 +1,23 @@
+<h2>Syncfusion Gantt in Angular</h2>
+
+<!-- <ejs-gantt
+  [dataSource]="data"
+  [taskFields]="taskSettings"
+  [timelineSettings]="{
+    timelineViewMode: 'Day',
+    timelineUnitSize: 50
+  }"
+  [durationUnit]="'Day'"
+>
+</ejs-gantt> -->
+<div>
+<ejs-gantt
+  [dataSource]="data"
+  [taskFields]="taskSettings"
+  [columns]="columnSettings"
+  [timelineSettings]="timelineSettings"
+  [height]="450"
+  [allowSorting]="true"
+>
+</ejs-gantt>
+</div>

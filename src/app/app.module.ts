@@ -18,6 +18,8 @@ import { EmployeeDetailsDialogComponent } from './employee-details-dialog/employ
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import { DeleteConfirmationDialogComponent } from './delete-confirmation-dialog-component/delete-confirmation-dialog-component.component';
+import { GanttComponent } from './gantt/gantt.component';
+import { GanttModule } from '@syncfusion/ej2-angular-gantt';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { DeleteConfirmationDialogComponent } from './delete-confirmation-dialog-
     UpdateEmployeeComponent,
     EmployeeDetailsComponent,
     EmployeeDetailsDialogComponent,
-    DeleteConfirmationDialogComponent
+    DeleteConfirmationDialogComponent,
+    GanttComponent
     
   ],
   imports: [
@@ -41,6 +44,7 @@ import { DeleteConfirmationDialogComponent } from './delete-confirmation-dialog-
     MatTableModule,          // Table Module
     MatButtonModule,         // Buttons
     MatCardModule,           // For styling containers/cards
+    GanttModule
   ],
   providers: [
     provideClientHydration(withEventReplay()),
